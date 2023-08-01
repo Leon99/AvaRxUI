@@ -1,5 +1,6 @@
 ﻿using Avalonia;
 using System;
+using Avalonia.ReactiveUI;
 using ReactiveUI.Avalonia.Splat;
 
 namespace AvaRxUI;
@@ -18,5 +19,6 @@ class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .LogToTrace()
-            .UseReactiveUIWithMicrosoftDependencyResolver(App.ConfigureServices);
+            .UseReactiveUI();
+            // .UseReactiveUIWithMicrosoftDependencyResolver(App.ConfigureServices);
 }

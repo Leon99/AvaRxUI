@@ -1,27 +1,25 @@
 ﻿using System;
-using System.Reactive;
+using System.Collections.ObjectModel;
+using System.Linq;
 using ReactiveUI;
-using Splat;
 
 namespace AvaRxUI.ViewModels;
 
-public class MainWindowViewModel : ReactiveObject, IScreen
+public class MainWindowViewModel : ViewModelBase, IScreen
 {
     public RoutingState Router { get; }
 
-    public ReactiveCommand<Unit, IRoutableViewModel> GoFirst { get; }
-    public ReactiveCommand<Unit, IRoutableViewModel> GoSecond { get; }
-    public ReactiveCommand<Unit, IRoutableViewModel?> GoBack => Router.NavigateBack;
+
+    private readonly ObservableCollection<EntityViewModel> _entities;
+    public ObservableCollection<EntityViewModel> Entities => _entities;
+
 
     public MainWindowViewModel()
     {
         Router = new RoutingState();
-        GoFirst = ReactiveCommand.CreateFromObservable(NavigateTo<FirstViewModel>, Router.Navigate.CanExecute);
-        GoSecond = ReactiveCommand.CreateFromObservable(NavigateTo<SecondViewModel>, Router.Navigate.CanExecute);
-    }
-
-    private IObservable<IRoutableViewModel> NavigateTo<T>() where T:IRoutableViewModel
-    {
-        return Router.Navigate.Execute(Locator.Current.GetService<T>());
+        
+        _entities = new ObservableCollection<EntityViewModel>(
+            Enumerable.Range(1, 50)
+                .Select(i => new EntityViewModel { StringProp = Guid.NewGuid().ToString() }));
     }
 }

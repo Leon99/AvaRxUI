@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaRxUI", "AvaRxUI.csproj", "{726CE375-AF35-420A-81E8-CE32D20F60D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrowserBack.Wpf", "BrowserBack.Wpf\BrowserBack.Wpf.csproj", "{E40AEE3E-BDDD-408F-B3D6-A90F02EE3E75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaRxUI", "AvaRxUI\AvaRxUI.csproj", "{2B680A5D-D21F-4515-9A4B-E882CF8EC2F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{726CE375-AF35-420A-81E8-CE32D20F60D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{726CE375-AF35-420A-81E8-CE32D20F60D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{726CE375-AF35-420A-81E8-CE32D20F60D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{726CE375-AF35-420A-81E8-CE32D20F60D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E40AEE3E-BDDD-408F-B3D6-A90F02EE3E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E40AEE3E-BDDD-408F-B3D6-A90F02EE3E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E40AEE3E-BDDD-408F-B3D6-A90F02EE3E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E40AEE3E-BDDD-408F-B3D6-A90F02EE3E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B680A5D-D21F-4515-9A4B-E882CF8EC2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B680A5D-D21F-4515-9A4B-E882CF8EC2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B680A5D-D21F-4515-9A4B-E882CF8EC2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B680A5D-D21F-4515-9A4B-E882CF8EC2F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
